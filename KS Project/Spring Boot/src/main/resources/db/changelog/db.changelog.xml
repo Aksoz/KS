@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+		http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd
+		http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd
+		http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd">
+    <changeSet id="4" author="ks">
+        <sql>
+            CREATE TABLE sozlesme (
+                id BIGINT NOT NULL AUTO_INCREMENT,
+            baslik VARCHAR(255) NOT NULL,
+            icerik VARCHAR(3000) NOT NULL,
+            taraf1 VARCHAR(255) NOT NULL,
+            taraf2 VARCHAR(255) NOT NULL,
+            cayma VARCHAR(50) NOT NULL,
+            tarih DATETIME NOT NULL,
+            taraf1id BIGINT NOT NULL,
+            taraf2id BIGINT NOT NULL,
+            CONSTRAINT PK_id PRIMARY KEY (id)
+            );
+
+        </sql>
+        <rollback>
+            DROP table sozlesme;
+        </rollback>
+    </changeSet>
+
+    <changeSet id="5" author="ks">
+        <sql>
+            CREATE TABLE user (
+                id BIGINT NOT NULL AUTO_INCREMENT,
+            isim VARCHAR(255) NOT NULL,
+            soyisim VARCHAR(255) NOT NULL,
+            password VARCHAR(255) NOT NULL,
+            mail VARCHAR(255) NOT NULL,
+            role VARCHAR(255) NOT NULL,
+            vkn VARCHAR(15) NOT NULL,
+            CONSTRAINT PK_id PRIMARY KEY (id)
+            );
+
+        </sql>
+        <rollback>
+            DROP table user;
+        </rollback>
+    </changeSet>
+
+
+
+
+</databaseChangeLog>

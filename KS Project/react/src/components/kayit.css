@@ -1,0 +1,54 @@
+* { 
+    font-family: Arial;
+    font-size: 15px;
+}
+
+.kayitform {
+	text-align:  center;
+	background-color:#a5b4fc;
+
+}
+.formbox {
+	position: relative;
+}
+.inp {
+	padding: 0px;
+	width: 270px;
+	height: 25px;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	background-color: #c7d2fe;
+	color: #3730a3;
+	border-width: 2px;
+	border-color: #3730a3;
+	box-shadow: none;
+	border-radius: 2px;
+	border-style: solid;
+
+	
+}
+
+.bilgi {
+	color: #3730a3;
+	text-align: center;
+	margin-bottom: 5px;
+	font-size: 22px;
+}
+
+.but {
+	box-sizing: content-box;
+	max-width: default;
+	color: white;
+	background-color: #4f46e5;
+}
+
+::placeholder {
+	color: white;
+}
+
+.pic {
+	background-color: red; 
+	text-align: center;
+}
+
+
